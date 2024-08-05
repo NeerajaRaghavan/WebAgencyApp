@@ -1,0 +1,339 @@
+body{ margin:0px;}
+h1{
+    color:blue;
+    font-size: 65px;
+    text-align: center;
+}
+footer{
+    padding:20px;
+    background-color: darkcyan;
+    color:white;
+    text-align: center;
+    font-size:17px;
+    /* bottom:0px;
+    position:fixed;
+    width:100%; */
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+}
+footer p{
+    padding: 5px;
+}
+#container{
+    width:80%;
+    margin:auto;
+    min-height:500px;
+}
+
+ul{
+    margin:0px;
+    padding:0px 10% 0px;
+    background-image: linear-gradient(to left, Darkblue, red, black);
+    top:0px;
+    position: sticky;
+}
+
+ul li{
+    
+    padding:18px 40px;
+    display:inline-block;
+}
+
+ul li a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+ul li:hover{
+    background-color: goldenrod;
+    cursor: pointer;
+}
+@keyframes mybanner {
+    25%{
+        background-image: url('2.jpg');
+      
+        }
+    
+    50%{
+        background-image: url('3.jpg');
+    }
+    75%{
+        background-image: url('4.jpg');
+          }
+        }   
+#banner{
+    height:400px;
+    background-image: url("1.jpg");
+    background-size:100% 100%;
+    animation: mybanner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.service{
+    margin:2%;
+    padding:1%;
+    background-image: linear-gradient(orange,blue);
+    display:inline-block;
+    width:18.5%;
+    height:300px;
+    color:white;
+    text-align: center;
+    }
+.service:hover{
+    background-image: linear-gradient(blue,orange);
+    cursor: pointer;
+}
+.servicepic{
+    height:150px;
+    width:100%;
+
+}
+
+.service P{
+    text-align: justify;
+
+}
+
+/* Service Page Style Starts here */
+#myservice{
+    display:grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.serviceblock{
+    padding:20px;
+    margin:40px;
+    box-shadow: 0px 0px 2px red; /*the shadow wil move :  0px left to right/ 0px to to down grey color 
+    with 10px density of grey shadow */
+    min-height: 300px;
+    /* text-align: center; */
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.textjustify{
+    text-align: justify;
+}
+
+.red{color: red;}
+.blue{color: blue;}
+.orange{color:orange;}
+
+/* Contact Us Page Style Starts here */
+fieldset{
+    width:400px;
+    padding:30px;
+    margin: 50px auto 40px;
+    border:5px solid lightseagreen;
+    border-radius: 1px 80px;
+    box-shadow: 5px 10px 50px lightseagreen;
+}
+
+legend{
+    background-color: lightseagreen;
+    padding: 6px 25px;
+    font-size: 20px;
+    color: white;
+}
+
+fieldset table{
+    width:100%;
+}
+fieldset table tr{
+    height:50px;
+}
+
+.smallinput{
+    height:30px;
+    width:100%
+
+}
+
+.biginput{
+    height:70px;
+}
+
+.smallinput:focus{
+    outline-color:  red;
+}
+
+button{
+    background: blue;
+    padding:8px 20px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+button:hover{
+    background:orangered;
+}
+button:focus{ /*focus means the click */
+    background:black;
+    cursor: progress;
+}
+
+header{
+    padding:0px 10%;
+    display:grid;
+    grid-template-columns: 80% 20%;
+    font-weight: bold;
+    color: blue;
+    text-transform: capitalize;
+}
+/* for extra small device Media Query */
+@media screen and (min-width:0px) and (max-width:700px) {
+    ul{
+        padding:0px;
+        position: static;
+        text-align: center;
+    }
+    
+    ul li{
+        
+        padding: 7px 3px;
+        }
+    
+    ul li a{
+       font-size: 13px;
+      
+    }
+
+    header{
+        grid-template-columns: auto;
+    }
+
+    #banner{
+    height:200px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .service{
+        width:93%;
+        height:auto;
+        }
+
+        footer{
+            grid-template-columns: auto;
+        }
+
+        #container{
+            width:95%;
+        }
+
+        #myservice{
+            grid-template-columns: auto;
+
+        }
+
+        fieldset{
+            width:750%;
+        }
+}
+
+/* for medium device Media Query */
+@media screen and (min-width:700px) and (max-width:1000px) {
+    ul{
+        padding:0px;
+        position: static;
+     }
+
+           ul li{
+            padding: 9px 5px;
+           }
+    
+    ul li a{
+       font-size: 16px;
+            
+    }
+
+    header{
+     grid-template-columns: auto auto;
+    }
+
+    #banner{
+    height:250px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .service{
+        width:43%;
+        min-height:150px;
+        }
+
+        footer{
+            grid-template-columns: auto;
+        }
+
+        #container{
+            width:95%;
+        }
+
+        #myservice{
+            grid-template-columns: auto;
+
+        }
+
+        fieldset{
+            width:50%;
+        }
+
+        .serviceblock{
+            min-height: 150px;
+        }
+}
+
+/* for Large device Media Query */
+@media screen and (min-width:1000px) and (max-width:1350px) {
+
+    header{
+        grid-template-columns: 60% 40%;
+    }
+   ul li{
+     padding: 12px 10px;
+    }
+    
+    ul li a{
+       font-size: 18px;
+            
+    }
+
+    #banner{
+    height:300px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .service{
+        width:43%;
+        min-height:150px;
+        }
+
+        footer{
+            grid-template-columns: auto auto auto;
+        }
+
+        #container{
+            width:90%;
+        }
+
+        #myservice{
+            grid-template-columns: auto auto;
+
+        }
+
+    
+}
